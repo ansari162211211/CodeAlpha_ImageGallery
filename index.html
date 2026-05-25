@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <p class="hero-tag">Explore &amp; Discover</p>
+        <h1>Modern Image Gallery</h1>
+        <p class="hero-sub">Curated photos with smooth navigation, filters, and a fullscreen lightbox.</p>
+    </header>
+
+    <nav class="filters" aria-label="Image categories">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="people">People</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+    </nav>
+
+    <p class="gallery-count" id="galleryCount" aria-live="polite"></p>
+
+    <div class="gallery" id="gallery">
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1015/600/450" alt="Mountain lake at sunset" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Mountain Lake</h3>
+                <p>Serene waters reflecting golden peaks</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1018/600/450" alt="Forest trail in morning light" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Forest Trail</h3>
+                <p>Misty paths through ancient trees</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1020/600/450" alt="Urban skyline at dusk" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Urban Skyline</h3>
+                <p>City lights against twilight skies</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1025/600/450" alt="Portrait in natural light" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Golden Hour</h3>
+                <p>Warm portrait in soft sunlight</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1035/600/450" alt="Ocean waves on rocky coast" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Coastal Waves</h3>
+                <p>Powerful surf along rugged cliffs</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1041/600/450" alt="Abstract geometric patterns" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Geometric Flow</h3>
+                <p>Bold shapes and vivid contrasts</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1043/600/450" alt="Busy city street at night" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Neon Streets</h3>
+                <p>Vibrant nightlife in the metropolis</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1044/600/450" alt="Friends laughing outdoors" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Joyful Moment</h3>
+                <p>Candid laughter among friends</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1050/600/450" alt="Desert dunes at sunrise" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Desert Dawn</h3>
+                <p>Rippling sand under first light</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1051/600/450" alt="Colorful abstract texture" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Color Burst</h3>
+                <p>Explosive hues in fluid motion</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1056/600/450" alt="Modern architecture facade" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Modern Lines</h3>
+                <p>Clean angles of contemporary design</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1062/600/450" alt="Artist at work in studio" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Creative Focus</h3>
+                <p>Artist immersed in their craft</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1067/600/450" alt="Waterfall in lush jungle" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Hidden Falls</h3>
+                <p>Tropical cascade through green canopy</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1074/600/450" alt="Minimal abstract composition" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Minimal Mood</h3>
+                <p>Subtle tones and quiet balance</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1080/600/450" alt="Bridge over river at sunset" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>River Bridge</h3>
+                <p>Iconic span glowing at golden hour</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1084/600/450" alt="Musician performing live" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Live Stage</h3>
+                <p>Energy of a live performance</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1016/600/450" alt="Rocky canyon with river below" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Canyon Vista</h3>
+                <p>Dramatic cliffs carved by time</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1027/600/450" alt="Rainy city intersection" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Rainy Crosswalk</h3>
+                <p>Reflections on wet urban streets</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1031/600/450" alt="Surfer walking on the beach" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Beach Walk</h3>
+                <p>Silhouette against rolling waves</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1039/600/450" alt="Swirling paint textures" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Paint Swirl</h3>
+                <p>Organic curves in rich pigment</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1047/600/450" alt="Snowy mountain peak" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Alpine Peak</h3>
+                <p>Snow-capped summit above the clouds</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1055/600/450" alt="Historic European street" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Old Town</h3>
+                <p>Cobblestone lanes and classic facades</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1060/600/450" alt="Light trails and motion blur" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Light Trails</h3>
+                <p>Streaks of color in long exposure</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1070/600/450" alt="Hiker on mountain ridge" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Summit Trek</h3>
+                <p>Adventurer overlooking vast valleys</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="nature">
+            <img src="https://picsum.photos/id/1077/600/450" alt="Autumn forest with golden leaves" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Nature</span>
+                <h3>Autumn Glow</h3>
+                <p>Golden foliage in crisp fall air</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="city">
+            <img src="https://picsum.photos/id/1083/600/450" alt="Aerial view of coastal city" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">City</span>
+                <h3>Coastal City</h3>
+                <p>Harbor and skyline from above</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="abstract">
+            <img src="https://picsum.photos/id/1011/600/450" alt="Soft bokeh light circles" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">Abstract</span>
+                <h3>Bokeh Dreams</h3>
+                <p>Soft orbs of light and color</p>
+            </div>
+        </article>
+
+        <article class="gallery-card" data-category="people">
+            <img src="https://picsum.photos/id/1024/600/450" alt="Child playing in a field" loading="lazy">
+            <div class="card-overlay">
+                <span class="card-category">People</span>
+                <h3>Pure Wonder</h3>
+                <p>Innocent joy in open meadows</p>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close lightbox">&times;</button>
+
+        <button class="lightbox-nav prev" id="prev" aria-label="Previous image">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" alt="">
+            <div class="lightbox-info">
+                <span class="lightbox-category" id="lightboxCategory"></span>
+                <h2 id="lightboxTitle"></h2>
+                <p id="lightboxDesc"></p>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
+            </div>
+        </div>
+
+        <button class="lightbox-nav next" id="next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <footer class="footer">
+        <p>Use arrow keys to navigate &middot; Press <kbd>Esc</kbd> to close</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
